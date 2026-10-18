@@ -1,0 +1,6 @@
+(()=>{const r=document.documentElement,b=document.body;try{if(localStorage.getItem('cc-theme')==='light')b.classList.add('light')}catch{}
+const t=document.getElementById('theme'),u=()=>t.textContent=b.classList.contains('light')?'DARK':'LIGHT';t.onclick=()=>{b.classList.toggle('light');try{localStorage.setItem('cc-theme',b.classList.contains('light')?'light':'dark')}catch{}u()};u();
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});document.querySelectorAll('.rev').forEach(e=>io.observe(e));
+const l=[...document.querySelectorAll('.sub a')].map(a=>[a,document.querySelector(a.getAttribute('href'))]);
+const f=()=>{const h=innerHeight,m=r.scrollHeight-h;r.style.setProperty('--read',m>0?Math.min(1,scrollY/m):0);let k=-1;l.forEach(([a,s],i)=>{if(s.getBoundingClientRect().top<=h*.4)k=i});l.forEach(([a],i)=>a.classList.toggle('on',i===k))};
+addEventListener('scroll',()=>requestAnimationFrame(f),{passive:true});f()})();
