@@ -1,0 +1,4 @@
+SHA-256 of the original files by Ajlikeadj (https://github.com/ajlikeadj)
+51eaf9355f9696d1ab1c561548924bc73e678670a03fc6038c4a6222dc591b21  Chemistry-for-Computer-Science.docx
+b2e20ca81089d1d6b71f1262c01274bd13381891d2ee032bbdb35d9b44b7f9ea  Chemistry-for-Computer-Science.pptx
+8d03fcd5fa07f0c2db30bce8b901ea1675a50fbb6bc3493ea4dd17b7232b6958  Chemistry-for-Computer-Science.pdf

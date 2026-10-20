@@ -4,3 +4,5 @@ const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target
 const l=[...document.querySelectorAll('.sub a')].map(a=>[a,document.querySelector(a.getAttribute('href'))]);
 const f=()=>{const h=innerHeight,m=r.scrollHeight-h;r.style.setProperty('--read',m>0?Math.min(1,scrollY/m):0);let k=-1;l.forEach(([a,s],i)=>{if(s.getBoundingClientRect().top<=h*.4)k=i});l.forEach(([a],i)=>a.classList.toggle('on',i===k))};
 addEventListener('scroll',()=>requestAnimationFrame(f),{passive:true});f()})();
+(()=>{const b=document.getElementById('dlBtn'),m=document.getElementById('dlMenu');if(!b)return;const c=()=>{m.hidden=true;b.setAttribute('aria-expanded','false')};
+b.onclick=e=>{e.stopPropagation();m.hidden=!m.hidden;b.setAttribute('aria-expanded',String(!m.hidden))};document.addEventListener('click',c);document.addEventListener('keydown',e=>{if(e.key==='Escape'){c();b.focus()}})})();
